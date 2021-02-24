@@ -8,7 +8,7 @@ function displayCars(){
   let el = $( '#cars');
   el.empty();
   for ( i in garage ){
-    el.append( `<li> ${garage[i].year} ${garage[i].make} ${garage[i].model} </li>`);
+    el.append( `<li> ${garage[i].year}, ${garage[i].make}: ${garage[i].model} </li>`);
   }
 }
 
@@ -17,7 +17,7 @@ function addCar(){
 
   $( '#addCarButton' ).on( 'click', newCar( $( '#carYear' ).val(),
     $( '#carMake' ).val(), $( '#carModel' ).val() ) );
-    
+
   $( '#carYear'  ).val('');
   $( '#carMake'  ).val('');
   $( '#carModel' ).val('');

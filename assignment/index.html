@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="scripts/styles.css">
     <title>Week 6 Tier 1 Assignment</title>
   </head>
-  <body>
-    <h1>Week 6 Tier 1 Assignment</h1>
-    <h2>Alex's Garage<span id="garageTitle"></span></h2>
+  <body class="homepage">
+    <header class = "topHeader">
+      <h1 class="mainTitle">Week 6 Tier 1 Assignment</h1>
+      <h2>Alex's Garage<span id="garageTitle"></span></h2>
+    </header>
       <input type="number" placeholder="year"  id="carYear">
       <input type="text"   placeholder="make"  id="carMake">
       <input type="text"   placeholder="model" id="carModel">
       <button id="addCarButton">Add Car</button>
+      <h3>Cars:</h3>
+      <ul id="cars"></ul>
   </body>
 </html>
