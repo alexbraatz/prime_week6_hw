@@ -28,7 +28,8 @@ function addCar(){
   // addCar function will be disabled
   if( isGarageFull() ) {
     console.log( "Garage is full! No more cars.")
-  } else {
+  }
+  else {
     // logic gate to check if any fields are left blank
     if ( ( $('#carYear').val().length === 0 || $('#carMake').val().length === 0 )
         || $('#carModel').val().length === 0 ) {
@@ -41,9 +42,11 @@ function addCar(){
       $( '#carYear'  ).val('');
       $( '#carMake'  ).val('');
       $( '#carModel' ).val('');
+      $( '#carPic'   ).val('');
       // clear values of input boxes
-    } // end inner if logic gate
-  } // end outer if logic
+    } // end inner if-logic gate
+
+  } // end outer if-logic
   displayCars();
   // display cars in garage to DOM
 } // end addCar
@@ -59,12 +62,13 @@ function readyNow(){
 /*
 Do not change newCar for base mode!
 */
-function newCar(yearInput, makeInput, modelInput){
-  console.log('in newCar:', yearInput, makeInput, modelInput);
+function newCar(yearInput, makeInput, modelInput, photoInput){
+  console.log('in newCar:', yearInput, makeInput, modelInput, photoInput);
   const newCarObject = {
     year: yearInput,
     make: makeInput,
-    model: modelInput
+    model: modelInput,
+    photo: photoInput
   }
   garage.push(newCarObject);
   //return true;
