@@ -6,10 +6,17 @@ let garage = [];
 function displayCars(){
   console.log( 'in displayCars' );
 
+  let pics = $( '#photos' );
+  pics.empty();
   let el = $( '#cars');
   el.empty();
   for ( i in garage ){
     el.append( `<li> ${garage[i].year} ${garage[i].make}\: ${garage[i].model} </li>`);
+    image = new Image();
+    image.src = garage[i].photo;
+    image.onload = function () {
+      $('#photos').empty().append(image);
+    };
   }
 } // end displayCars
 
@@ -37,12 +44,13 @@ function addCar(){
       console.log( "Please enter value in all entries");
     } else {
       $( '#addCarButton' ).on( 'click',
-      newCar( $( '#carYear' ).val(), $( '#carMake' ).val(), $( '#carModel' ).val() ));
+      newCar( $( '#carYear' ).val(), $( '#carMake' ).val(), $( '#carModel' ).val(),
+              $( '#carPhoto').val() ) );
       // all fields are entered? car is added to the garage with newCar function
       $( '#carYear'  ).val('');
       $( '#carMake'  ).val('');
       $( '#carModel' ).val('');
-      $( '#carPic'   ).val('');
+      $( '#carPhoto'   ).val('');
       // clear values of input boxes
     } // end inner if-logic gate
 
