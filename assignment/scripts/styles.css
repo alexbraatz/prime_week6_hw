@@ -1,12 +1,58 @@
 .topHeader {
-  margin-top: -21px;
+  margin-top: -22px;
+  /* background: linear-gradient(110deg, #FF4500 60%, #00E0D4 60% ); */
 }
 
 .homepage {
-  font-family: BlinkMacSystemFont, 'Open Sans', sans-serif;
-
+  font-family: "Quicksand", sans-serif;
+  text-transform: capitalize;
+  margin: 0;
+  background-image:url(/Users/alexj/Pictures/cssphotos/porscheGarage.jpg); /* freely-usabble images */
+  background-repeat: no-repeat;
+  background-size: 80em;
 }
 
-.mainTitle {
-  background-color: #5A91BB;
+.hwTitle {
+  background: linear-gradient(110deg, #020301 60%, #020301 60%);
+  background-color: #FF4500;
+  color: #EAEFF2;
+  padding: .25em;
 }
+
+.garageTitle {
+  /* background: linear-gradient(110deg, #F3F5F9 60%, #F3F5F9 60%);*/
+  background-color: #F3F5F9;
+  color: #020301;
+  margin-top: -22px;
+  padding-left: .25em;
+}
+
+#addCarButton {
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.addCarInfo {
+  position: relative;
+  margin: 30px;
+  color: #0E050F;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  overflow: hidden;
+  letter-spacing: 0.22em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s ease
+}
+
+/* .searchBox {
+  overflow: hidden;
+  padding-left: .5em;
+  width: 120px;
+  height: 20px;
+  margin: auto;
+  font-size: 16px;
+} */
