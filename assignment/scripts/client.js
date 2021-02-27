@@ -6,17 +6,20 @@ let garage = [];
 function displayCars(){
   console.log( 'in displayCars' );
 
-  let pics = $( '#photos' );
-  pics.empty();
+  // let pics = $( '#photos' );
+  // pics.empty();
   let el = $( '#cars');
   el.empty();
   for ( i in garage ){
     el.append( `<li> ${garage[i].year} ${garage[i].make}\: ${garage[i].model} </li>`);
-    image = new Image();
-    image.src = garage[i].photo;
-    image.onload = function () {
-      $('#photos').empty().append(image);
-    };
+    const image = document.createElement('img')
+    image.src = garage[i].photo
+    document.querySelector('#cars').appendChild(image);
+    // image = new Image();
+    // image.src = garage[i].photo;
+    // image.onload = function () {
+    //   $('#photos').empty().append(image);
+    // };
   }
 } // end displayCars
 
